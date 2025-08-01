@@ -37,7 +37,7 @@ if st.button("Calculate Option Prices"):
     ax.set_title(f'{option_type.capitalize()} Option Price Comparison')
     st.pyplot(fig)
 
-    st.subheader("📐 Option Greeks (Black-Scholes)")
+    st.subheader(" Option Greeks (Black-Scholes)")
     greeks = black_scholes_greeks(S, K, T, r, sigma, option_type)
     for g, val in greeks.items():
         st.write(f"**{g}:** {val:.4f}")
