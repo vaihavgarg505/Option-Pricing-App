@@ -8,7 +8,7 @@ import numpy as np
 import pandas as pd
 
 st.set_page_config(page_title="Option Pricing Models", layout="centered")
-st.title("📈 Option Pricing Models")
+st.title(" Option Pricing Models")
 st.markdown("Compare **Black-Scholes**, **Binomial Tree**, and **Monte Carlo** models.")
 
 S = st.number_input("Spot Price (S)", value=100.0)
@@ -24,7 +24,7 @@ if st.button("Calculate Option Prices"):
     bt = binomial_tree_price(S, K, T, r, sigma, steps=100, option_type=option_type, american=american_flag)
     mc = monte_carlo_price(S, K, T, r, sigma, simulations=10000, option_type=option_type)
 
-    st.subheader("💰 Option Prices")
+    st.subheader(" Option Prices")
     st.write(f"**Black-Scholes Price**: ${bs:.2f}")
     st.write(f"**Binomial Tree Price**: ${bt:.2f}")
     st.write(f"**Monte Carlo Price**: ${mc:.2f}")
@@ -53,16 +53,16 @@ if st.button("Calculate Option Prices"):
     rhs = S - K * np.exp(-r * T)
     parity_diff = abs(lhs - rhs)
 
-    st.subheader("💡 Put-Call Parity Check")
+    st.subheader(" Put-Call Parity Check")
     st.write(f"Call - Put = {lhs:.4f}")
     st.write(f"S - K * exp(-rT) = {rhs:.4f}")
     if parity_diff < 0.1:
-        st.success("✅ Put-Call Parity holds (within tolerance)")
+        st.success(" Put-Call Parity holds (within tolerance)")
     else:
-        st.error(f"❌ Put-Call Parity does NOT hold (Δ = {parity_diff:.4f})")
+        st.error(f" Put-Call Parity does NOT hold (Δ = {parity_diff:.4f})")
 
 # ------------------- Additional Visualizations -------------------
-st.subheader("📊 Option Price vs Strike Price and Time to Maturity")
+st.subheader(" Option Price vs Strike Price and Time to Maturity")
 
 selected_plot_type = st.selectbox("Choose Option Type for Plots", ["call", "put"])
 
