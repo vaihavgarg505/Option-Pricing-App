@@ -14,6 +14,6 @@ Verifies the fundamental relationship between European call and put prices.
 How to Run
 pip install streamlit numpy scipy matplotlib
 streamlit run app.py
-Made with ❤️ for quant finance learning and interviews.
+
 [Launch App]( https://option-pricing-app-x123.streamlit.app/ )
 
