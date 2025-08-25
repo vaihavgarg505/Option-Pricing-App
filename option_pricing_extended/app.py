@@ -61,7 +61,7 @@ if st.button("Calculate Option Prices"):
     else:
         st.error(f" Put-Call Parity does NOT hold (Δ = {parity_diff:.4f})")
 
-# ------------------- Additional Visualizations -------------------
+
 st.subheader(" Option Price vs Strike Price and Time to Maturity")
 
 selected_plot_type = st.selectbox("Choose Option Type for Plots", ["call", "put"])
